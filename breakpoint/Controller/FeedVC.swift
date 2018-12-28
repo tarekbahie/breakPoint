@@ -22,6 +22,9 @@ class FeedVC: UIViewController {
     }
 
     @IBAction func createNewFeedPressed(_ sender: Any) {
+        let createPost = storyboard?.instantiateViewController(withIdentifier: "CreatePostVC") as? CreatePostVC
+        present(createPost!, animated: true, completion: nil)
+        
     }
     
     

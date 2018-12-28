@@ -14,6 +14,9 @@
 		4706386C21D4DA1200EBF223 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706386B21D4DA1200EBF223 /* ShadowView.swift */; };
 		4706386E21D50B7E00EBF223 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706386D21D50B7E00EBF223 /* AuthService.swift */; };
 		4706387021D532B200EBF223 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706386F21D532B200EBF223 /* MeVC.swift */; };
+		475C268D21D6105600BD9F94 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C268C21D6105600BD9F94 /* CreatePostVC.swift */; };
+		475C268F21D6172D00BD9F94 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C268E21D6172D00BD9F94 /* UIView.swift */; };
+		475C269121D6186900BD9F94 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C269021D6186900BD9F94 /* FeedCell.swift */; };
 		47F5251E21D2C66E00D3DD8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F5251D21D2C66E00D3DD8E /* AppDelegate.swift */; };
 		47F5252021D2C66E00D3DD8E /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F5251F21D2C66E00D3DD8E /* FeedVC.swift */; };
 		47F5252221D2C66E00D3DD8E /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F5252121D2C66E00D3DD8E /* GroupsVC.swift */; };
@@ -33,6 +36,9 @@
 		4706386B21D4DA1200EBF223 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		4706386D21D50B7E00EBF223 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4706386F21D532B200EBF223 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
+		475C268C21D6105600BD9F94 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		475C268E21D6172D00BD9F94 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		475C269021D6186900BD9F94 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		47F5251A21D2C66E00D3DD8E /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F5251D21D2C66E00D3DD8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F5251F21D2C66E00D3DD8E /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 				4706386721D4D32F00EBF223 /* AuthVC.swift */,
 				4706386921D4D36E00EBF223 /* LoginVC.swift */,
 				4706386F21D532B200EBF223 /* MeVC.swift */,
+				475C268C21D6105600BD9F94 /* CreatePostVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 			children = (
 				4706386521D4D24600EBF223 /* ColorTextField.swift */,
 				4706386B21D4DA1200EBF223 /* ShadowView.swift */,
+				475C269021D6186900BD9F94 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 		47F5253421D2C6E700D3DD8E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				475C268E21D6172D00BD9F94 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,12 +284,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4706387021D532B200EBF223 /* MeVC.swift in Sources */,
+				475C269121D6186900BD9F94 /* FeedCell.swift in Sources */,
 				4706386821D4D32F00EBF223 /* AuthVC.swift in Sources */,
 				47F5252221D2C66E00D3DD8E /* GroupsVC.swift in Sources */,
 				4706386A21D4D36E00EBF223 /* LoginVC.swift in Sources */,
+				475C268F21D6172D00BD9F94 /* UIView.swift in Sources */,
 				4706386E21D50B7E00EBF223 /* AuthService.swift in Sources */,
 				47F5251E21D2C66E00D3DD8E /* AppDelegate.swift in Sources */,
 				4706386C21D4DA1200EBF223 /* ShadowView.swift in Sources */,
+				475C268D21D6105600BD9F94 /* CreatePostVC.swift in Sources */,
 				47F5252021D2C66E00D3DD8E /* FeedVC.swift in Sources */,
 				4706386621D4D24600EBF223 /* ColorTextField.swift in Sources */,
 				4706386421D4C82D00EBF223 /* DataService.swift in Sources */,
