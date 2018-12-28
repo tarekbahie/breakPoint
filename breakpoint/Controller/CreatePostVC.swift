@@ -23,13 +23,16 @@ class CreatePostVC: UIViewController, UITextViewDelegate {
         view.addGestureRecognizer(tap)
         view.addGestureRecognizer(pan)
         sendBtn.bindToKeyboard()
-        
-
-        // Do any additional setup after loading the view.
     }
     @objc func handleClose(){
         view.endEditing(true)
         textView.text = "compose your feed here"
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if Auth.auth().currentUser != nil {
+            userEmailLbl.text = Auth.auth().currentUser?.email
+        }
     }
     
     @IBAction func closeBtnPressed(_ sender: Any) {

@@ -21,6 +21,8 @@ class GroupsVC: UIViewController {
 
     
     @IBAction func addGroupsBtnPressed(_ sender: Any) {
+        let createGroups = storyboard?.instantiateViewController(withIdentifier: "CreateGroupsVC") as? CreateGroupsVC
+        present(createGroups!, animated: true, completion: nil)
     }
     
 
