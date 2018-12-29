@@ -11,3 +11,6 @@ end
 pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
+pod 'Bolts'
+pod 'FBSDKCoreKit', '~> 4.38.0'
+pod 'FBSDKLoginKit', '~> 4.38.0'

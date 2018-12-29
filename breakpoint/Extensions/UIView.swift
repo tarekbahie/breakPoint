@@ -13,7 +13,7 @@ extension UIView {
         let deltaY = endingFrame.origin.y - startingFrame.origin.y
         
         UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIView.KeyframeAnimationOptions(rawValue: curve), animations: {
-            self.frame.origin.y += deltaY
+            self.frame.origin.y += deltaY 
         }, completion: nil)
         
     }

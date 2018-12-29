@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateGroupsVC: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
     
@@ -23,7 +24,6 @@ class CreateGroupsVC: UIViewController, UITextFieldDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.bindToKeyboard()
         peopleLbl.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
@@ -55,7 +55,30 @@ class CreateGroupsVC: UIViewController, UITextFieldDelegate, UITableViewDataSour
     }
     
     @IBAction func doneBtnPressed(_ sender: Any) {
-    }
+        if titleLbl.text != "" && descriptionLbl.text != "" {
+            DataService.instance.getIdsForUsername(forUsername: chosenName) { (idsArray) in
+                var userIds = idsArray
+                userIds.append((Auth.auth().currentUser?.uid)!)
+                
+                DataService.instance.createGroup(forTitle: self.titleLbl.text!, withDescription: self.descriptionLbl.text!, forUserIds: userIds, handler: { (groupCreated) in
+                    if groupCreated{
+                    self.dismiss(animated: true, completion: nil)
+                    } else{
+                        let errorPopUp = UIAlertController(title: "Couldn't create group", message: "try again", preferredStyle: .actionSheet)
+                        let errorAction = UIAlertAction(title: "retry", style: .default, handler: { (pressed) in
+                            self.dismiss(animated: true, completion: nil)
+                        })
+                       errorPopUp.addAction(errorAction)
+                        self.present(errorPopUp, animated: true, completion: nil)
+                        
+                    }
+                })
+                
+            }
+                
+            }
+        }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
