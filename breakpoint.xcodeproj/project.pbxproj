@@ -21,6 +21,7 @@
 		475C268D21D6105600BD9F94 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C268C21D6105600BD9F94 /* CreatePostVC.swift */; };
 		475C268F21D6172D00BD9F94 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C268E21D6172D00BD9F94 /* UIView.swift */; };
 		475C269121D6186900BD9F94 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C269021D6186900BD9F94 /* FeedCell.swift */; };
+		4787CC5421D95E25006FF946 /* MeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4787CC5321D95E25006FF946 /* MeCell.swift */; };
 		47A7AC7021D7707900668634 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A7AC6F21D7707900668634 /* GroupCell.swift */; };
 		47A7AC7221D7826000668634 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A7AC7121D7826000668634 /* Group.swift */; };
 		47A7AC7421D78FF600668634 /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A7AC7321D78FF600668634 /* GroupFeedVC.swift */; };
@@ -53,6 +54,7 @@
 		475C268C21D6105600BD9F94 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		475C268E21D6172D00BD9F94 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		475C269021D6186900BD9F94 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		4787CC5321D95E25006FF946 /* MeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCell.swift; sourceTree = "<group>"; };
 		47A7AC6F21D7707900668634 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		47A7AC7121D7826000668634 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		47A7AC7321D78FF600668634 /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				4740E54021D6886D00E101D2 /* UserCell.swift */,
 				47A7AC6F21D7707900668634 /* GroupCell.swift */,
 				47A7AC7521D792B900668634 /* GroupFeedCell.swift */,
+				4787CC5321D95E25006FF946 /* MeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				47F5252221D2C66E00D3DD8E /* GroupsVC.swift in Sources */,
 				4706386A21D4D36E00EBF223 /* LoginVC.swift in Sources */,
 				475C268F21D6172D00BD9F94 /* UIView.swift in Sources */,
+				4787CC5421D95E25006FF946 /* MeCell.swift in Sources */,
 				4706386E21D50B7E00EBF223 /* AuthService.swift in Sources */,
 				47A7AC7421D78FF600668634 /* GroupFeedVC.swift in Sources */,
 				4740E53D21D6808600E101D2 /* CreateGroupsVC.swift in Sources */,
