@@ -9,6 +9,9 @@
 import UIKit
 import Firebase
 import FBSDKLoginKit
+import Alamofire
+import SwiftyJSON
+import FBSDKCoreKit
 
 class AuthVC: UIViewController {
 
@@ -46,8 +49,23 @@ class AuthVC: UIViewController {
             }
             
             let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
-            
-            // Perform login by calling Firebase APIs
+            let req = FBSDKGraphRequest(graphPath: "me", parameters: ["fields" : "email,name" ], tokenString: accessToken.tokenString, version: nil, httpMethod: "GET")
+            req?.start(completionHandler: { (connection, result, error) in
+                if error == nil {
+                    print("result \(String(describing: result))")
+                    let data:[String:AnyObject] = result as! [String : AnyObject]
+                    let email = data["email"]! as? String
+                    print(email)
+                    print(accessToken.tokenString)
+                    
+                    let FBPass = self.storyboard?.instantiateViewController(withIdentifier: "FBPasswordCreateVC") as? FBPasswordCreateVC
+                    FBPass?.initData(withEmail: email!)
+                    self.present(FBPass!, animated: true, completion: nil)
+                    
+                } else {
+                    print("problem in req error \(String(describing: error))")
+                }
+            })
             Auth.auth().signInAndRetrieveData(with: credential, completion: { (user, error) in
                 if let error = error {
                     print("Login error: \(error.localizedDescription)")
@@ -58,11 +76,12 @@ class AuthVC: UIViewController {
                     
                     return
                 }
-
-                    self.dismiss(animated: true, completion: nil)
+                
+//                    self.dismiss(animated: true, completion: nil)
                 
             })
             
         }
     }
 }
+
